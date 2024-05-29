@@ -1,0 +1,26 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.rightCart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.itemCount {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20px;
+  width: 20px;
+  border-radius: 10px;
+  background-color: brown;
+  color:#fff;
+}
+.cartImage {
+  width: 30px;
+  height: 30px;
+}
