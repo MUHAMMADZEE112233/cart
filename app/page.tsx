@@ -38,6 +38,7 @@ const Home = () => {
           dispatch({ type: "FILTER_BY_COLOR", payload: color })
         }
       />
+    
     </>
   );
 };

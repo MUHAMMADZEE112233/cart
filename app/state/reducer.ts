@@ -65,12 +65,14 @@ export const reducer = (state: State, action: Action): State => {
         case 'DECREMENT_QTY':
             return {
                 ...state,
-                basket: state.basket.map(item =>
-                    item.id === action.payload && item.qtyInBag > 1
-                        ? { ...item, qtyInBag: item.qtyInBag - 1 }
-                        : item
-                ),
-            };
+                basket: state.basket
+                  .map(item =>
+                    item.id === action.payload
+                      ? { ...item, qtyInBag: item.qtyInBag - 1 }
+                      : item
+                  )
+                  .filter(item => item.qtyInBag > 0), // Remove items with qtyInBag <= 0
+              };
         case 'REMOVE_FROM_BASKET':
             return {
                 ...state,
